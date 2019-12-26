@@ -12,11 +12,19 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <body style="margin : 0px; overflow: hidden;">
-	<a-scene embedded arjs>
-		<a-gltf-model src="https://rawgit.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf"></a-gltf-model>
-
+	<!-- You can get the Hiro image that this demo needs here: https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg-->
+	<!-- Just load it up on your phone or print it out and point your camera at the image and a little blue-green box should appear!-->
+	<a-scene embedded="" arjs="sourceType: webcam;" physics="debug: true; friction: 0.1; restitution: 1.25; gravity: -0.8;">
 		<a-marker-camera type="pattern" url="pattern-pikachu.patt"></a-marker-camera>
+		
+		<a-plane static-body="static-body" rotation="-90 0 0" scale="3 3 3" color="blue"></a-plane>
+		<a-gltf-model dynamic-body="dynamic-body" src="https://andrescuervo.github.io/assets/ghostie/ghostie.gltf" scale="0.25 0.25 0.25" position="-3 0 0"></a-gltf-model>
+		<a-gltf-model dynamic-body="dynamic-body" src="https://andrescuervo.github.io/assets/ghostie/ghostie.gltf" scale="0.25 0.25 0.25" position="-1.75 0 0"></a-gltf-model>
+		<a-gltf-model dynamic-body="dynamic-body" src="https://andrescuervo.github.io/assets/ghostie/ghostie.gltf" scale="0.25 0.25 0.25" position="-0.5 0 0"></a-gltf-model>
+		<a-gltf-model dynamic-body="dynamic-body" src="https://andrescuervo.github.io/assets/ghostie/ghostie.gltf" scale="0.25 0.25 0.25" position="0.75 0 0"></a-gltf-model>
+		<a-gltf-model dynamic-body="dynamic-body" src="https://andrescuervo.github.io/assets/ghostie/ghostie.gltf" scale="0.25 0.25 0.25" position="2 0 0"></a-gltf-model>
 	</a-scene>
+	<!-- GLTF model from: https://ten-thousand-models.appspot.com/detail.html?file_id=40746-->
 </body>
 
 </html>
