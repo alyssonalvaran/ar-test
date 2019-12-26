@@ -27,16 +27,16 @@
 
 	<a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 		<a-assets>
-			<a-asset-item id="smiley" src="pikachu.gltf"></a-asset-item>
+			<a-asset-item id="pikachu" src="pikachu/glTF/model.gltf"></a-asset-item>
 		</a-assets>
 		<a-marker type="pattern" url="pattern-pikachu.patt">
-			<a-entity gltf-model="#smiley" rotation= "180 0 0">
-			<a-animation attribute="position"
-			dur="5000"
-			direction="alternate"
-			from="0 1 0"
-			to="0 5 0"
-			repeat="indefinite"></a-animation>
+			<a-entity gltf-model="#pikachu" rotation= "180 0 0">
+				<a-animation attribute="position"
+				dur="5000"
+				direction="alternate"
+				from="0 1 0"
+				to="0 5 0"
+				repeat="indefinite"></a-animation>
 			</a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
